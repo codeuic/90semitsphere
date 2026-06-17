@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Poppins", ui-monospace, SFMono-Regular, monospace;
+  --color-brand-orange: #FF5E2A;
+  --color-brand-cocoa: #E04B1A;
+}
+
+@layer utilities {
+  .bento-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .bento-card:hover {
+    box-shadow: 0 10px 200px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.02);
+    border-color: #cbd5e1;
+  }
+
+  .pill {
+    border-radius: 9999px;
+    padding: 3px 12px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .status-online {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+
+  .status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+
+  .status-alert {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+}
+
+/* ==========================================================================
+   HIGH-FIDELITY THEME OVERRIDES FOR PRESTINE LIGHT/DARK INTERACTIVITY
+   ========================================================================== */
+
+/* --- DETAILED LIGHT MODE SPECIFICATIONS --- */
+#app-wrapper.theme-light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Rescales text containers */
+#app-wrapper.theme-light h1,
+#app-wrapper.theme-light h2,
+#app-wrapper.theme-light h3,
+#app-wrapper.theme-light h4,
+#app-wrapper.theme-light h5,
+#app-wrapper.theme-light h6,
+#app-wrapper.theme-light p,
+#app-wrapper.theme-light span,
+#app-wrapper.theme-light label,
+#app-wrapper.theme-light div {
+  color: #0f172a;
+}
+
+/* Clear all gradients dynamically in light mode, replacing with clean, bright cards */
+#app-wrapper.theme-light [class*="bg-gradient-to"] {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+/* Background overrides from dark slates onto clean off-white layers using robust class substring matches */
+#app-wrapper.theme-light [class*="bg-slate-9"],
+#app-wrapper.theme-light [class*="bg-neutral-9"],
+#app-wrapper.theme-light [class*="bg-slate-85"],
+#app-wrapper.theme-light [class*="bg-neutral-85"],
+#app-wrapper.theme-light .bg-slate-900,
+#app-wrapper.theme-light .bg-slate-950,
+#app-wrapper.theme-light .bg-neutral-900,
+#app-wrapper.theme-light .bg-neutral-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+}
+
+#app-wrapper.theme-light [class*="bg-slate-80"],
+#app-wrapper.theme-light [class*="bg-neutral-80"],
+#app-wrapper.theme-light .bg-slate-800,
+#app-wrapper.theme-light .bg-slate-850,
+#app-wrapper.theme-light .bg-neutral-800,
+#app-wrapper.theme-light .bg-neutral-850 {
+  background-color: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Force light input panels */
+#app-wrapper.theme-light input,
+#app-wrapper.theme-light select,
+#app-wrapper.theme-light textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+#app-wrapper.theme-light input::placeholder,
+#app-wrapper.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Retarget slate and white text colors to deep gray labels inside light containers to safeguard legibility */
+#app-wrapper.theme-light [class*="text-slate-10"],
+#app-wrapper.theme-light [class*="text-slate-20"],
+#app-wrapper.theme-light [class*="text-slate-30"],
+#app-wrapper.theme-light [class*="text-neutral-10"],
+#app-wrapper.theme-light [class*="text-neutral-20"],
+#app-wrapper.theme-light [class*="text-neutral-30"],
+#app-wrapper.theme-light [class*="text-white"],
+#app-wrapper.theme-light .text-white,
+#app-wrapper.theme-light .text-slate-50,
+#app-wrapper.theme-light .text-slate-100,
+#app-wrapper.theme-light .text-slate-200,
+#app-wrapper.theme-light .text-slate-300,
+#app-wrapper.theme-light .text-neutral-50,
+#app-wrapper.theme-light .text-neutral-100,
+#app-wrapper.theme-light .text-neutral-200,
+#app-wrapper.theme-light .text-neutral-300,
+#app-wrapper.theme-light .text-indigo-200,
+#app-wrapper.theme-light .text-indigo-300 {
+  color: #1e293b !important;
+}
+
+#app-wrapper.theme-light [class*="text-slate-40"],
+#app-wrapper.theme-light [class*="text-neutral-40"],
+#app-wrapper.theme-light .text-slate-400,
+#app-wrapper.theme-light .text-neutral-400 {
+  color: #475569 !important;
+}
+
+#app-wrapper.theme-light [class*="text-slate-500"],
+#app-wrapper.theme-light [class*="text-neutral-500"],
+#app-wrapper.theme-light .text-slate-500,
+#app-wrapper.theme-light .text-neutral-500 {
+  color: #64748b !important;
+}
+
+/* Ensure secondary borders and layout dividers look clean and high-contrast in light mode */
+#app-wrapper.theme-light [class*="border-slate-8"],
+#app-wrapper.theme-light [class*="border-slate-7"],
+#app-wrapper.theme-light [class*="border-neutral-8"],
+#app-wrapper.theme-light [class*="border-neutral-7"],
+#app-wrapper.theme-light .border-slate-800,
+#app-wrapper.theme-light .border-slate-850,
+#app-wrapper.theme-light .border-neutral-800,
+#app-wrapper.theme-light .border-neutral-850,
+#app-wrapper.theme-light .border-slate-700,
+#app-wrapper.theme-light .border-neutral-700 {
+  border-color: #e2e8f0 !important;
+}
+
+#app-wrapper.theme-light .divide-slate-800 > * + *,
+#app-wrapper.theme-light .divide-slate-850 > * + *,
+#app-wrapper.theme-light .divide-neutral-800 > * + *,
+#app-wrapper.theme-light .divide-neutral-850 > * + *,
+#app-wrapper.theme-light [class*="divide-slate"] > * + *,
+#app-wrapper.theme-light [class*="divide-neutral"] > * + * {
+  border-color: #edf2f7 !important;
+}
+
+/* Safeguard secondary navigation tabs inside apps */
+#app-wrapper.theme-light button:not(.bg-white):not([class*='bg-[#']):not([class*='bg-emerald']):not([class*='bg-red']):not([class*='bg-rose']):not([class*='bg-transparent']) {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border-color: #e2e8f0;
+}
+
+#app-wrapper.theme-light button:not(.bg-white):not([class*='bg-[#']):not([class*='bg-emerald']):not([class*='bg-red']):not([class*='bg-rose']):not([class*='bg-transparent']):hover {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Adjust text inside dark-bordered items or badges */
+#app-wrapper.theme-light .text-emerald-400 {
+  color: #059669 !important;
+}
+#app-wrapper.theme-light .text-emerald-100 {
+  color: #14532d !important;
+}
+#app-wrapper.theme-light .text-amber-400 {
+  color: #d97706 !important;
+}
+#app-wrapper.theme-light .text-rose-450,
+#app-wrapper.theme-light .text-rose-400 {
+  color: #dc2626 !important;
+}
+
+/* Specific Card Overrides inside Client-side Light Mode to override dark gradient templates */
+
+/* 1. "Delicious Food • Quick Delivery" (Customer Welcome Banner) */
+#app-wrapper.theme-light [class*="from-blue-750"],
+#app-wrapper.theme-light [class*="from-blue-700"] {
+  background-image: none !important;
+  background-color: #eff6ff !important;
+  border: 1px solid #bfdbfe !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02) !important;
+}
+#app-wrapper.theme-light [class*="from-blue-700"] h2,
+#app-wrapper.theme-light [class*="from-blue-700"] p,
+#app-wrapper.theme-light [class*="from-blue-700"] span {
+  color: #1e3a8a !important;
+}
+#app-wrapper.theme-light [class*="from-blue-700"] input {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+}
+#app-wrapper.theme-light [class*="from-blue-700"] input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* 2. "Cleared Ledger Account Balance" Card inside Vendor Dashboard */
+#app-wrapper.theme-light [class*="from-emerald-600"] {
+  background-image: none !important;
+  background-color: #f0fdf4 !important;
+  border: 1px solid #bbf7d0 !important;
+}
+#app-wrapper.theme-light [class*="from-emerald-600"] h3 {
+  color: #14532d !important;
+}
+#app-wrapper.theme-light [class*="from-emerald-600"] p {
+  color: #15803d !important;
+}
+#app-wrapper.theme-light [class*="from-emerald-600"] span,
+#app-wrapper.theme-light [class*="from-emerald-600"] strong {
+  color: #166534 !important;
+}
+
+/* 3. "Cleared Logistical Earnings" Card inside Rider Wallet component */
+#app-wrapper.theme-light [class*="from-neutral-80"] {
+  background-image: none !important;
+  background-color: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+}
+#app-wrapper.theme-light [class*="from-neutral-80"] h2,
+#app-wrapper.theme-light [class*="from-neutral-80"] h3 {
+  color: #0f172a !important;
+}
+#app-wrapper.theme-light [class*="from-neutral-80"] p,
+#app-wrapper.theme-light [class*="from-neutral-80"] span {
+  color: #475569 !important;
+}
+
+/* 4. Paystack Secure Gateway simulator modal top header */
+#app-wrapper.theme-light .bg-emerald-950 {
+  background-color: #047857 !important;
+  color: #ffffff !important;
+}
+#app-wrapper.theme-light .bg-emerald-950 span,
+#app-wrapper.theme-light .bg-emerald-950 p {
+  color: #ffffff !important;
+}
+
+/* 5. Rider App simulated mobile viewport container */
+#app-wrapper.theme-light #rider-mobile-root {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+#app-wrapper.theme-light #rider-mobile-root header,
+#app-wrapper.theme-light #rider-mobile-root footer,
+#app-wrapper.theme-light #rider-mobile-root div:not([class*="bg-[#FF5E2A]"]):not([class*="bg-emerald-600"]):not(.text-white) {
+  border-color: #e2e8f0 !important;
+}
+
+/* --- FORCE IMMERSIVE RETRO-DARK FOR THE SUPERBAR ITSELF ALWAYS --- */
+#app-wrapper .bg-slate-900.text-slate-100 {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+#app-wrapper .bg-slate-900.text-slate-100 button {
+  color: #cbd5e1 !important;
+}
+#app-wrapper .bg-slate-900.text-slate-100 button:hover {
+  background-color: #1e293b !important;
+}
+#app-wrapper .bg-slate-900.text-slate-100 button.bg-white {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+#app-wrapper .bg-slate-900.text-slate-100 p,
+#app-wrapper .bg-slate-900.text-slate-100 span {
+  color: #cbd5e1 !important;
+}
+#app-wrapper .bg-slate-900.text-slate-100 p.text-white {
+  color: #ffffff !important;
+}
+
+/* Support active buttons and text in modal sliders inside light/dark transition */
+.theme-light .bg-brand-orange,
+.theme-light .bg-\[\#FF5E2A\] {
+  background-color: #FF5E2A !important;
+  color: #ffffff !important;
+}
+.theme-light .text-white-active-indicator,
+.theme-light .bg-\[\#FF5E2A\] span,
+.theme-light .bg-\[\#FF5E2A\] p {
+  color: #ffffff !important;
+}
+
+/* Ensure all colored/dark action buttons (and their inner icons) always render clean white fonts for high-contrast visibility */
+#app-wrapper.theme-light button.bg-emerald-500,
+#app-wrapper.theme-light button.bg-emerald-600,
+#app-wrapper.theme-light button.bg-emerald-700,
+#app-wrapper.theme-light button.bg-emerald-800,
+#app-wrapper.theme-light button[class*="bg-emerald"],
+#app-wrapper.theme-light button[class*="bg-green"],
+#app-wrapper.theme-light button[class*="bg-[#"],
+#app-wrapper.theme-light button[class*="bg-red"],
+#app-wrapper.theme-light button[class*="bg-rose"],
+#app-wrapper.theme-light button[class*="bg-slate-9"],
+#app-wrapper.theme-light button[class*="bg-neutral-9"],
+#app-wrapper.theme-light button.bg-brand-orange,
+#app-wrapper.theme-light button.bg-slate-900,
+#app-wrapper.theme-light button.bg-neutral-900 {
+  color: #ffffff !important;
+}
+
+#app-wrapper.theme-light button.bg-emerald-500 *,
+#app-wrapper.theme-light button.bg-emerald-600 *,
+#app-wrapper.theme-light button.bg-emerald-700 *,
+#app-wrapper.theme-light button.bg-emerald-800 *,
+#app-wrapper.theme-light button[class*="bg-emerald"] *,
+#app-wrapper.theme-light button[class*="bg-green"] *,
+#app-wrapper.theme-light button[class*="bg-[#"] *,
+#app-wrapper.theme-light button[class*="bg-red"] *,
+#app-wrapper.theme-light button[class*="bg-rose"] *,
+#app-wrapper.theme-light button[class*="bg-slate-9"] *,
+#app-wrapper.theme-light button[class*="bg-neutral-9"] *,
+#app-wrapper.theme-light button.bg-brand-orange *,
+#app-wrapper.theme-light button.bg-slate-900 *,
+#app-wrapper.theme-light button.bg-[#08BE3B] *,
+#app-wrapper.theme-light button.bg-[#1D9D41] *,
+#app-wrapper.theme-light button.bg-[#F28316] *,
+#app-wrapper.theme-light button.bg-neutral-900 * {
+  color: #ffffff !important;
+}
+
+/* Specific high-contrast overrides for navigation header buttons in light mode */
+#app-wrapper.theme-light .bg-slate-950 button {
+  background-color: #0c0f18 !important;
+  color: #ffffff !important;
+  border: 1px solid #1a203c !important;
+}
+#app-wrapper.theme-light .bg-slate-950 button.bg-[#FF5E2A],
+#app-wrapper.theme-light .bg-slate-950 button[class*="bg-[#FF5E2A]"] {
+  background-color: #FF5E2A !important;
+  color: #ffffff !important;
+  border-color: #f79e43 !important;
+}
+#app-wrapper.theme-light .bg-slate-950 button:hover:not(.bg-[#FF5E2A]) {
+  background-color: #1a2035 !important;
+  color: #ffffff !important;
+}
+#app-wrapper.theme-light .bg-slate-950 button * {
+  color: #ffffff !important;
+}
+#app-wrapper.theme-light .bg-slate-950 div.bg-slate-900 {
+  background-color: #0c0f18 !important;
+  border: 1px solid #1a203c !important;
+  color: #ffffff !important;
+}
+#app-wrapper.theme-light .bg-slate-950 div.bg-slate-900 * {
+  color: #ffffff !important;
+}
+
+
+
+/* ==========================================================================
+   PUBLIC WEBSITE (LANDING PAGE) HIGH-FIDELITY DARK THEME SPECIFICATIONS
+   ========================================================================== */
+#app-wrapper.theme-dark #landing-root {
+  background-color: #020617 !important;
+  color: #f1f5f9 !important;
+}
+
+#app-wrapper.theme-dark #landing-nav {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+#app-wrapper.theme-dark #landing-nav button:not([class*="bg-[#FF5E2A]"]) {
+  color: #94a3b8 !important;
+}
+
+#app-wrapper.theme-dark #landing-nav button:hover {
+  color: #ffffff !important;
+  background-color: #1e293b !important;
+}
+
+#app-wrapper.theme-dark #landing-root h1,
+#app-wrapper.theme-dark #landing-root h2,
+#app-wrapper.theme-dark #landing-root h3,
+#app-wrapper.theme-dark #landing-root h4,
+#app-wrapper.theme-dark #landing-root h5,
+#app-wrapper.theme-dark #landing-root h6,
+#app-wrapper.theme-dark #landing-root .text-neutral-900 {
+  color: #ffffff !important;
+}
+
+#app-wrapper.theme-dark #landing-root p,
+#app-wrapper.theme-dark #landing-root span:not(.text-white):not(.text-neutral-800),
+#app-wrapper.theme-dark #landing-root .text-neutral-600 {
+  color: #94a3b8 !important;
+}
+
+#app-wrapper.theme-dark #landing-root .bg-white {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #1e293b !important;
+}
+
+#app-wrapper.theme-dark #landing-root section:first-of-type {
+  background-image: linear-gradient(to bottom right, #090d1a, #020617) !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+#app-wrapper.theme-dark #landing-root .border-neutral-200,
+#app-wrapper.theme-dark #landing-root .border-neutral-300 {
+  border-color: #1e293b !important;
+}
+
+#app-wrapper.theme-dark #landing-root .text-neutral-500 {
+  color: #64748b !important;
+}
+
+#app-wrapper.theme-dark #landing-root input,
+#app-wrapper.theme-dark #landing-root select,
+#app-wrapper.theme-dark #landing-root textarea {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #1e293b !important;
+}
+
+#app-wrapper.theme-dark #landing-root input::placeholder {
+  color: #475569 !important;
+}
+
+#app-wrapper.theme-dark #landing-root .bg-[#ffffff] {
+  background-color: #0f172a !important;
+}
+
+#app-wrapper.theme-dark #landing-root footer {
+  border-color: #1e293b !important;
+  background-color: #090d16 !important;
+}
+

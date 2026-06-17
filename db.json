@@ -1,0 +1,517 @@
+{
+  "customerUsers": [
+    {
+      "id": "usr_cus_1",
+      "name": "Isaac Irede",
+      "email": "isaac@theiredefoundation.org",
+      "phone": "+2348011223344",
+      "role": "customer",
+      "walletBalance": 15500
+    }
+  ],
+  "vendorUsers": [
+    {
+      "id": "usr_ven_1",
+      "name": "Adekunle Sizzle",
+      "email": "ade@sizzlegarden.com",
+      "phone": "+2348022334455",
+      "role": "vendor",
+      "walletBalance": 42000
+    },
+    {
+      "id": "usr_ven_2",
+      "name": "Mei Spice",
+      "email": "mei@spicewok.com",
+      "phone": "+2348033445566",
+      "role": "vendor",
+      "walletBalance": 18500
+    }
+  ],
+  "riderUsers": [
+    {
+      "id": "usr_rid_1",
+      "name": "Tunde Ojo",
+      "email": "tunde@delivoriders.com",
+      "phone": "+2348044556677",
+      "role": "rider",
+      "walletBalance": 8200
+    },
+    {
+      "id": "usr_rid_2",
+      "name": "Chioma Rider",
+      "email": "chioma@delivoriders.com",
+      "phone": "+2348055667788",
+      "role": "rider",
+      "walletBalance": 3500
+    }
+  ],
+  "adminUsers": [
+    {
+      "id": "usr_adm_1",
+      "name": "Super Administrator",
+      "email": "admin@delivo.com",
+      "phone": "+2348099990000",
+      "role": "admin",
+      "walletBalance": 125000
+    },
+    {
+      "id": "usr_adm_2",
+      "name": "90s Admin",
+      "email": "admin@emitsphere.com",
+      "phone": "+2348099991111",
+      "role": "admin",
+      "walletBalance": 125000
+    }
+  ],
+  "vendors": [
+    {
+      "id": "ven_1",
+      "userId": "usr_ven_1",
+      "name": "Sizzle Burger & Grill",
+      "email": "ade@sizzlegarden.com",
+      "phone": "+2348022334455",
+      "category": "Fast Food",
+      "description": "Flue-grilled premium beef burgers, spicy grilled tenders, and hand-cut cheesy fries.",
+      "address": "22 Alfred Rewane Road, Ikoyi, Lagos, Nigeria",
+      "lat": 6.4549,
+      "lng": 3.4246,
+      "logoUrl": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=300&auto=format&fit=crop&q=80",
+      "bannerUrl": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&auto=format&fit=crop&q=80",
+      "cacRegistration": "RC 92451952",
+      "taxId": "T-95192452",
+      "bankAccount": {
+        "bankName": "Zenith Bank",
+        "accountNumber": "1012345678",
+        "accountName": "Sizzle Garden Restaurant Ltd"
+      },
+      "operatingHours": "09:00 - 22:00",
+      "approvedStatus": "APPROVED",
+      "rating": 4.8,
+      "balance": 42000,
+      "createdAt": "2026-05-14T06:36:33.128Z"
+    },
+    {
+      "id": "ven_2",
+      "userId": "usr_ven_2",
+      "name": "Spice & Wok Kitchen",
+      "email": "mei@spicewok.com",
+      "phone": "+2348033445566",
+      "category": "Chinese & Asian",
+      "description": "Hot authentic stir fry noodles, sweet-sour glazed prawns, and handmade dumplings.",
+      "address": "76 Allen Avenue, Ikeja, Lagos, Nigeria",
+      "lat": 6.596,
+      "lng": 3.3371,
+      "logoUrl": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=300&auto=format&fit=crop&q=80",
+      "bannerUrl": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&auto=format&fit=crop&q=80",
+      "cacRegistration": "RC 48102581",
+      "taxId": "T-25814810",
+      "bankAccount": {
+        "bankName": "Access Bank",
+        "accountNumber": "0029384756",
+        "accountName": "Spice & Wok Catering Intl"
+      },
+      "operatingHours": "10:00 - 21:30",
+      "approvedStatus": "APPROVED",
+      "rating": 4.5,
+      "balance": 18500,
+      "createdAt": "2026-05-29T06:36:33.128Z"
+    }
+  ],
+  "riders": [
+    {
+      "id": "rid_1",
+      "userId": "usr_rid_1",
+      "name": "Tunde Ojo",
+      "email": "tunde@delivoriders.com",
+      "phone": "+2348044556677",
+      "vehicleType": "Motocycle (Delivery Box)",
+      "vehicleNumber": "LA-195-YAB",
+      "governmentId": "ID-84201859",
+      "driversLicense": "DL-ZEN924",
+      "photoUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80",
+      "bankAccount": {
+        "bankName": "Guaranty Trust Bank (GTB)",
+        "accountNumber": "0123456789",
+        "accountName": "Tunde Ojo"
+      },
+      "approvedStatus": "APPROVED",
+      "onlineStatus": "ONLINE",
+      "lat": 6.518,
+      "lng": 3.374,
+      "rating": 4.9,
+      "balance": 8200,
+      "createdAt": "2026-04-14T06:36:33.128Z"
+    },
+    {
+      "id": "rid_2",
+      "userId": "usr_rid_2",
+      "name": "Chioma Rider",
+      "email": "chioma@delivoriders.com",
+      "phone": "+2348055667788",
+      "vehicleType": "E-Bike",
+      "vehicleNumber": "EB-852IKE",
+      "governmentId": "ID-51924510",
+      "driversLicense": "DL-NIG841",
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80",
+      "bankAccount": {
+        "bankName": "Zenith Bank",
+        "accountNumber": "2029384857",
+        "accountName": "Chioma Nwachukwu"
+      },
+      "approvedStatus": "APPROVED",
+      "onlineStatus": "ONLINE",
+      "lat": 6.591,
+      "lng": 3.339,
+      "rating": 4.7,
+      "balance": 3500,
+      "createdAt": "2026-06-01T06:36:33.128Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_1",
+      "vendorId": "ven_1",
+      "name": "Flame BBQ Bacon Burger",
+      "description": "100% freshly grilled double beef patty, smoked crispy turkey bacon, melting cheddar cheese, hand-picked onions, and smoky signature house sauce.",
+      "price": 4500,
+      "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=80",
+      "category": "Burgers",
+      "isAvailable": true,
+      "variants": [
+        "Single Beef Patty",
+        "Double Beef Patty (+₦1200)",
+        "Triple Beef Patty (+₦2200)"
+      ],
+      "addOns": [
+        {
+          "name": "Extra Cheddar Slice",
+          "price": 400
+        },
+        {
+          "name": "Avocado Slices",
+          "price": 600
+        },
+        {
+          "name": "Crispy Fried Egg",
+          "price": 500
+        }
+      ]
+    },
+    {
+      "id": "prd_2",
+      "vendorId": "ven_1",
+      "name": "Spicy Firecracker Wings (6pcs)",
+      "description": "Crispy fried jumbo winglets coated in sweet sriracha glaze, toasted sesame seeds, and spring onions.",
+      "price": 3800,
+      "imageUrl": "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=500&auto=format&fit=crop&q=80",
+      "category": "Wings",
+      "isAvailable": true,
+      "variants": [
+        "Mild Spiced",
+        "Extra Hot Firecracker"
+      ],
+      "addOns": [
+        {
+          "name": "Creamy Blue Cheese Dip",
+          "price": 400
+        },
+        {
+          "name": "Garlic Ranch Dip",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": "prd_3",
+      "vendorId": "ven_1",
+      "name": "Hand-Cut Cheesy Sea Salt Fries",
+      "description": "Twice-fried Golden Russet potatoes dusted with fine sea-salt and drizzled with melted mozzarella cheese sauce.",
+      "price": 2200,
+      "imageUrl": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500&auto=format&fit=crop&q=80",
+      "category": "Sides",
+      "isAvailable": true,
+      "variants": [
+        "Standard Salted",
+        "Cajun Dusted Spice"
+      ],
+      "addOns": [
+        {
+          "name": "Jalapeño Slices",
+          "price": 300
+        },
+        {
+          "name": "Bacon Crumbs",
+          "price": 500
+        }
+      ]
+    },
+    {
+      "id": "prd_4",
+      "vendorId": "ven_2",
+      "name": "General Tso Sichuan Noodles",
+      "description": "Thin egg noodles wok-tossed in rich oyster sesame oil, dry chili seed paste, soy sauce, broccoli florets, and tender chicken strips.",
+      "price": 5200,
+      "imageUrl": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=500&auto=format&fit=crop&q=80",
+      "category": "Noodles",
+      "isAvailable": true,
+      "variants": [
+        "Vegetable Stir Fry",
+        "Tender Chicken Strips (+₦800)",
+        "Jumbo Tigers Prawn (+₦1800)"
+      ],
+      "addOns": [
+        {
+          "name": "Soft Soy-Marinated Egg",
+          "price": 450
+        },
+        {
+          "name": "Extra Steamed Brocoli",
+          "price": 400
+        }
+      ]
+    },
+    {
+      "id": "prd_5",
+      "vendorId": "ven_2",
+      "name": "Handmade Steamed Dumplings (5pcs)",
+      "description": "Delicate dough wrappers stuffed with minced pork or sesame mushrooms, served with special black-vinegar dip.",
+      "price": 2800,
+      "imageUrl": "https://images.unsplash.com/photo-1496116211227-15dcf298516d?w=500&auto=format&fit=crop&q=80",
+      "category": "Dumplings",
+      "isAvailable": true,
+      "variants": [
+        "Seared Pork Fillings",
+        "Wild Shiitake Mushroom (Veg)"
+      ],
+      "addOns": [
+        {
+          "name": "Sichuan Chili Crisp Oil",
+          "price": 300
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_1",
+      "customerId": "usr_cus_1",
+      "customerName": "Isaac Irede",
+      "customerEmail": "isaac@theiredefoundation.org",
+      "customerPhone": "+2348011223344",
+      "customerAddress": "45 Bode Thomas St, Surulere, Lagos",
+      "customerLat": 6.5012,
+      "customerLng": 3.3581,
+      "vendorId": "ven_1",
+      "vendorName": "Sizzle Burger & Grill",
+      "vendorLat": 6.4549,
+      "vendorLng": 3.4246,
+      "riderId": "rid_1",
+      "riderName": "Tunde Ojo",
+      "riderPhone": "+2348044556677",
+      "items": [
+        {
+          "productId": "prd_1",
+          "name": "Flame BBQ Bacon Burger",
+          "price": 4500,
+          "quantity": 1,
+          "selectedVariant": "Double Beef Patty"
+        }
+      ],
+      "subtotal": 4500,
+      "deliveryFee": 1200,
+      "serviceFee": 350,
+      "discount": 500,
+      "gatewayFee": 150,
+      "total": 5700,
+      "status": "DELIVERED",
+      "otp": "614859",
+      "otpVerified": true,
+      "couponCode": "LUNCHBOX",
+      "createdAt": "2026-06-13T03:36:33.128Z",
+      "updatedAt": "2026-06-13T04:06:33.128Z"
+    }
+  ],
+  "chats": [
+    {
+      "id": "msg_1",
+      "orderId": "ord_1",
+      "senderId": "usr_cus_1",
+      "senderName": "Isaac Irede",
+      "senderRole": "customer",
+      "text": "Please make sure the fries are crispy and not salty. Thank you!",
+      "timestamp": "2026-06-13T03:42:33.128Z",
+      "isRead": true
+    },
+    {
+      "id": "msg_2",
+      "orderId": "ord_1",
+      "senderId": "usr_ven_1",
+      "senderName": "Sizzle Burger Menu",
+      "senderRole": "vendor",
+      "text": "Sure thing, Isaac! Chef is preparing a fresh batch with custom sea-salt seasoning right now.",
+      "timestamp": "2026-06-13T03:48:33.128Z",
+      "isRead": true
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev_1",
+      "orderId": "ord_1",
+      "customerName": "Isaac Irede",
+      "rating": 5,
+      "comment": "Phenomenal burger! The double patty is massive and cooked perfectly. Fast delivery by Tunde too.",
+      "targetType": "vendor",
+      "targetId": "ven_1",
+      "createdAt": "2026-06-13T06:36:33.128Z"
+    },
+    {
+      "id": "rev_2",
+      "orderId": "ord_1",
+      "customerName": "Isaac Irede",
+      "rating": 5,
+      "comment": "Very polite, fast speed!",
+      "targetType": "rider",
+      "targetId": "rid_1",
+      "createdAt": "2026-06-13T06:36:33.128Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "cp_1",
+      "code": "DELIVOFIRST",
+      "discountType": "percentage",
+      "value": 15,
+      "maxUsage": 100,
+      "usageCount": 42,
+      "expiresAt": "2026-12-31",
+      "isActive": true
+    },
+    {
+      "id": "cp_2",
+      "code": "LUNCHBOX",
+      "discountType": "fixed",
+      "value": 1000,
+      "maxUsage": 50,
+      "usageCount": 23,
+      "expiresAt": "2026-12-31",
+      "isActive": true
+    },
+    {
+      "id": "cp_3",
+      "code": "FREESHIP",
+      "discountType": "fixed",
+      "value": 500,
+      "maxUsage": 200,
+      "usageCount": 10,
+      "expiresAt": "2026-11-30",
+      "isActive": true
+    }
+  ],
+  "tickets": [],
+  "walletTransactions": [],
+  "notifications": [],
+  "auditLogs": [
+    {
+      "id": "log_1781465069883_9ad3x",
+      "actor": "90s Admin",
+      "action": "LOGIN",
+      "details": "Logged in successfully via Role API portal. Type: admin",
+      "timestamp": "2026-06-14T19:24:29.883Z"
+    },
+    {
+      "id": "log_1781465068408_4y499",
+      "actor": "Tunde Ojo",
+      "action": "LOGIN",
+      "details": "Logged in successfully via Role API portal. Type: rider",
+      "timestamp": "2026-06-14T19:24:28.408Z"
+    },
+    {
+      "id": "log_1781465046489_tt6h2",
+      "actor": "Adekunle Sizzle",
+      "action": "LOGIN",
+      "details": "Logged in successfully via Role API portal. Type: vendor",
+      "timestamp": "2026-06-14T19:24:06.489Z"
+    },
+    {
+      "id": "log_1781333403198_iv6jg",
+      "actor": "Admin",
+      "action": "SMTP_TEST_FAILED",
+      "details": "SMTP connectivity verification email to ugwuisaaciu@gmail.com failed: Unexpected socket close",
+      "timestamp": "2026-06-13T06:50:03.198Z"
+    },
+    {
+      "id": "log_1781333387397_kexj5",
+      "actor": "Admin",
+      "action": "UPDATE_SMTP_SETTINGS",
+      "details": "Updated system SMTP parameters to target: smtp.gmail.com:465",
+      "timestamp": "2026-06-13T06:49:47.397Z"
+    },
+    {
+      "id": "log_1781333167015_naspl",
+      "actor": "Admin",
+      "action": "SMTP_TEST_FAILED",
+      "details": "SMTP connectivity verification email to ugwuisaaciu@gmail.com failed: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-4922037ba81sm48985205e9.15 - gsmtp",
+      "timestamp": "2026-06-13T06:46:07.015Z"
+    },
+    {
+      "id": "log_1781333158935_9we8i",
+      "actor": "Admin",
+      "action": "UPDATE_SMTP_SETTINGS",
+      "details": "Updated system SMTP parameters to target: smtp.gmail.com:587",
+      "timestamp": "2026-06-13T06:45:58.935Z"
+    },
+    {
+      "id": "log_1781333088813_yxehn",
+      "actor": "Admin",
+      "action": "UPDATE_SMTP_SETTINGS",
+      "details": "Updated system SMTP parameters to target: smtp.ethereal.email:587",
+      "timestamp": "2026-06-13T06:44:48.813Z"
+    },
+    {
+      "id": "log_1781333022875_hf3ia",
+      "actor": "Admin",
+      "action": "UPDATE_SMTP_SETTINGS",
+      "details": "Updated system SMTP parameters to target: smtp.ethereal.email:587",
+      "timestamp": "2026-06-13T06:43:42.875Z"
+    },
+    {
+      "id": "log_1781332609800_pcg4o",
+      "actor": "90s Admin",
+      "action": "LOGIN",
+      "details": "Logged in successfully via Role API portal. Type: admin",
+      "timestamp": "2026-06-13T06:36:49.800Z"
+    },
+    {
+      "id": "log_1",
+      "actor": "System",
+      "action": "INIT",
+      "details": "Ecosystem database initialised with pre-seed restaurant and rider configurations.",
+      "timestamp": "2026-06-13T06:36:33.128Z"
+    }
+  ],
+  "platformSettings": {
+    "platformFeeType": "flat",
+    "fixedServiceFee": 350,
+    "paystackFeeType": "percentage",
+    "paystackFeePercent": 1.5,
+    "deliveryFeeType": "flat",
+    "flatDeliveryFeePercent": 10,
+    "baseDeliveryFee": 800,
+    "deliveryPricePerKm": 170,
+    "minimumDispatchRangeKm": 8,
+    "taxType": "percentage",
+    "taxPercent": 5,
+    "paystackPublicKey": "pk_test_d6a469cd832916954b21de731601766ea0d5c3ee",
+    "paystackSecretKey": "sk_test_35c2eb409ce9d21ee0a47b554166df1aacf51eb5"
+  },
+  "authOtps": {},
+  "smtpSettings": {
+    "host": "smtp.ethereal.email",
+    "port": 587,
+    "secure": false,
+    "user": "nuq5gqpe4g5ayzyj@ethereal.email",
+    "password": "zwpbUm4xMJbjGyyktQ",
+    "sender": "\"90's.emitsphere Support\" <nuq5gqpe4g5ayzyj@ethereal.email>",
+    "adminEmail": "nuq5gqpe4g5ayzyj@ethereal.email"
+  }
+}

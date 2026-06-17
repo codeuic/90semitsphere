@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "AppStateTable": {
+      "title": "AppStateTable",
+      "description": "A serialized table representing persistent state of the application",
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "array",
+          "description": "The serialized records in this database table"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/app_state/{tableId}": {
+      "schema": "AppStateTable",
+      "description": "Collection of serialized database tables to maintain secure cloud persistence"
+    }
+  }
+}

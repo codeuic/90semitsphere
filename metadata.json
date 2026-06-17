@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Remix:90\u0027s.Emitsphere new 4",
+  "description": "Enterprise food delivery and logistics platform featuring multi-vendor registration, smart rider dispatch, real-time GPS tracking visualizers, secure OTP delivery, and an operations admin console.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
